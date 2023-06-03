@@ -1,0 +1,70 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+    provider        = "prisma-client-js"
+    previewFeatures = ["jsonProtocol"]
+}
+
+datasource db {
+    provider = "sqlite"
+    url      = env("DATABASE_URL")
+}
+
+model Brands {
+    id           String    @id @unique @default(cuid())
+    name         String
+    url          String
+    presentation String
+    headline     String
+    Products     Products?
+}
+
+model Products {
+    id          String       @id @unique @default(cuid())
+    handle      String
+    name        String
+    description String
+    image       String
+    price       Float
+    stock       Int
+    type        String
+    orderlines  Orderlines[]
+    cartItems   CartItems[]
+    brand       Brands       @relation(fields: [brandID], references: [id])
+    brandID     String       @unique
+}
+
+model CartItems {
+    id        String   @id @unique @default(cuid())
+    product   Products @relation(fields: [productID], references: [id])
+    productID String   @unique
+    cart      Cart     @relation(fields: [cartID], references: [id], onDelete: Cascade)
+    cartID    String   @unique
+    quantity  Int      @default(0)
+    addedAt   DateTime @default(now())
+}
+
+model Cart {
+    id        String      @id @unique @default(cuid())
+    cartItems CartItems[]
+    createdAt DateTime    @default(now())
+    order     Order?
+}
+
+model Orderlines {
+    id        String   @id @unique @default(cuid())
+    product   Products @relation(fields: [productID], references: [id])
+    productID String   @unique
+    order     Order    @relation(fields: [orderID], references: [id], onDelete: Cascade)
+    orderID   String   @unique
+    qty       Int
+}
+
+model Order {
+    id           String       @id @unique @default(cuid())
+    cart         Cart         @relation(fields: [cartID], references: [id], onDelete: Cascade)
+    cartID       String       @unique
+    isOrderValid Boolean
+    orderlines   Orderlines[]
+}

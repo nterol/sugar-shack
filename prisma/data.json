@@ -1,0 +1,262 @@
+{
+  "products": [
+    {
+      "type": "AMBER",
+      "name": "Sirop d'érable ambré premium",
+      "description": "Ce sirop d'érable ambré premium est caractérisé par sa saveur riche et son arôme délicat. Fabriqué à partir de l'extraction des érables matures, il offre une couleur légèrement dorée et une douceur équilibrée qui complète parfaitement vos crêpes, gaufres et desserts.",
+      "brand": "Decacer",
+      "brandURL": "www.decacer.com"
+    },
+    {
+      "type": "AMBER",
+      "name": "Sirop d'érable ambré biologique",
+      "description": "Notre sirop d'érable ambré biologique est issu de l'agriculture biologique, garantissant une production respectueuse de l'environnement. Son goût subtil et sa couleur ambrée naturelle en font un choix idéal pour agrémenter vos plats préférés, des pancakes aux yaourts.",
+      "brand": "Maple Grove Farms",
+      "brandURL": "www.maplegrove.com"
+    },
+    {
+      "type": "AMBER",
+      "name": "Sirop d'érable ambré vieilli en fût de chêne",
+      "description": "Ce sirop d'érable ambré vieilli en fût de chêne offre une expérience gustative unique. Son goût légèrement boisé et sa texture veloutée sont le résultat d'un vieillissement dans des fûts de chêne soigneusement sélectionnés. Parfait pour accompagner vos desserts raffinés et vos boissons chaudes.",
+      "brand": "Érable du Québec",
+      "brandURL": "www.erableduquebec.ca"
+    },
+    {
+      "type": "DARK",
+      "name": "Sirop d'érable sombre robuste",
+      "description": "Notre sirop d'érable sombre robuste est réputé pour son goût intense et sa couleur profonde. Il est fabriqué à partir des érables les plus matures, ce qui lui confère une saveur riche et puissante. Idéal pour ajouter une touche audacieuse à vos marinades, sauces et cocktails.",
+      "brand": "Highland Sugarworks",
+      "brandURL": "www.highlandsugarworks.com"
+    },
+    {
+      "type": "DARK",
+      "name": "Sirop d'érable sombre biologique",
+      "description": "Certifié biologique, notre sirop d'érable sombre est produit avec soin dans le respect de la nature. Sa teinte foncée et son goût robuste en font un choix privilégié des amateurs de sirop d'érable authentique. Parfait pour napper vos crêpes et gaufres pour un petit-déjeuner copieux.",
+      "brand": "Maple Grove Farms",
+      "brandURL": "www.maplegrove.com"
+    },
+    {
+      "type": "DARK",
+      "name": "Sirop d'érable sombre infusé à la vanille",
+      "description": "Découvrez la fusion parfaite entre le sirop d'érable sombre et la vanille exquise. Notre sirop d'érable sombre infusé à la vanille offre une expérience gustative unique, avec des notes chaudes et sucrées. Sublimez vos desserts, glaces et cafés avec cette délicieuse création.",
+      "brand": "Érablière Bernard",
+      "brandURL": "www.erablierebernard.com"
+    },
+    {
+      "type": "CLEAR",
+      "name": "Sirop d'érable clair traditionnel",
+      "description": "Notre sirop d'érable clair traditionnel est apprécié pour sa saveur douce et sa transparence cristalline. Récolté auprès des érables les plus délicats, il est idéal pour sucrer vos thés, vos céréales et vos fruits. Laissez-vous séduire par sa pureté et sa délicatesse naturelle.",
+      "brand": "Érable du Québec",
+      "brandURL": "www.erableduquebec.ca"
+    },
+    {
+      "type": "CLEAR",
+      "name": "Sirop d'érable clair biologique",
+      "description": "Ce sirop d'érable clair biologique est issu d'une production respectueuse de l'environnement. Son goût subtil et sa couleur dorée en font un choix idéal pour agrémenter vos boissons chaudes, vos yaourts et vos crêpes. Offrez-vous un délice naturel et biologique.",
+      "brand": "Boundary Maples",
+      "brandURL": "www.boundarymaples.com"
+    },
+    {
+      "type": "CLEAR",
+      "name": "Sirop d'érable clair en format familial",
+      "description": "Notre sirop d'érable clair en format familial est parfait pour satisfaire les grandes tablées. Son goût sucré et sa texture légère sont appréciés par les petits et les grands. Ajoutez une touche de douceur à vos petits-déjeuners en famille avec ce délicieux sirop d'érable.",
+      "brand": "Érablière Bernard",
+      "brandURL": "www.erablierebernard.com"
+    },
+    {
+      "type": "AMBER",
+      "name": "Sirop d'érable ambré artisanal",
+      "description": "Fabriqué de manière artisanale, ce sirop d'érable ambré est le fruit d'un savoir-faire traditionnel transmis de génération en génération. Son goût délicat et sa couleur ambrée en font un produit authentique à déguster sur vos crêpes, vos gaufres et même dans vos cocktails.",
+      "brand": "Sweet Tree Holdings",
+      "brandURL": "www.sweettreeholdings.com"
+    },
+    {
+      "type": "AMBER",
+      "name": "Sirop d'érable ambré aux épices",
+      "description": "Éveillez vos papilles avec notre sirop d'érable ambré aux épices savamment sélectionnées. Son mariage subtil de saveurs sucrées et épicées saura ravir vos sens. Ajoutez une touche de chaleur à vos desserts, vos pâtisseries et vos boissons chaudes avec cette création gourmande.",
+      "brand": "Citadelle",
+      "brandURL": "www.citadelle-camp.coop"
+    },
+    {
+      "type": "AMBER",
+      "name": "Sirop d'érable ambré en édition limitée",
+      "description": "Notre sirop d'érable ambré en édition limitée est un trésor rare à savourer. Récolté au moment optimal, il offre une complexité de saveurs incomparable et une couleur ambrée profonde. Faites-vous plaisir en ajoutant cette petite merveille à vos recettes préférées.",
+      "brand": "Cabot Maple",
+      "brandURL": "www.cabotmaple.com"
+    },
+    {
+      "type": "DARK",
+      "name": "Sirop d'érable sombre de récolte tardive",
+      "description": "Issu d'une récolte tardive, ce sirop d'érable sombre est réputé pour sa concentration de saveurs et sa richesse exceptionnelle. Son goût intense et sa texture sirupeuse en font un choix idéal pour sublimer vos glaces, vos crèmes brûlées et vos cocktails raffinés.",
+      "brand": "Sweet Tree Holdings",
+      "brandURL": "www.sweettreeholdings.com"
+    },
+    {
+      "type": "DARK",
+      "name": "Sirop d'érable sombre à l'érable fumé",
+      "description": "Découvrez une explosion de saveurs avec notre sirop d'érable sombre à l'érable fumé. Son goût fumé distinctif apporte une dimension supplémentaire à vos plats sucrés-salés et à vos sauces barbecue. Laissez-vous envoûter par ce sirop d'érable sombre aux arômes uniques.",
+      "brand": "Decacer",
+      "brandURL": "www.decacer.com"
+    },
+    {
+      "type": "DARK",
+      "name": "Sirop d'érable sombre infusé à la cannelle",
+      "description": "Le mariage de la cannelle et du sirop d'érable sombre crée une harmonie de saveurs à la fois chaleureuse et réconfortante. Notre sirop d'érable sombre infusé à la cannelle est parfait pour parfumer vos desserts, vos boissons chaudes et même vos plats de viande.",
+      "brand": "Citadelle",
+      "brandURL": "www.citadelle-camp.coop"
+    },
+    {
+      "type": "CLEAR",
+      "name": "Sirop d'érable clair à l'ancienne",
+      "description": "Remontez le temps avec notre sirop d'érable clair à l'ancienne, fabriqué selon des méthodes traditionnelles. Son goût sucré délicat et sa texture légère en font un choix intemporel pour accompagner vos crêpes, vos gaufres et vos desserts maison. Retrouvez la saveur d'antan dans chaque goutte.",
+      "brand": "Cabot Maple",
+      "brandURL": "www.cabotmaple.com"
+    },
+    {
+      "type": "CLEAR",
+      "name": "Sirop d'érable clair infusé au citron",
+      "description": "Apportez une touche de fraîcheur à vos plats sucrés avec notre sirop d'érable clair infusé au citron. Son mariage subtil de douceur et d'acidité réveillera vos papilles. Idéal pour napper vos salades de fruits, vos yaourts et vos pancakes pour une explosion de saveurs estivales.",
+      "brand": "Highland Sugarworks",
+      "brandURL": "www.highlandsugarworks.com"
+    },
+    {
+      "type": "CLEAR",
+      "name": "Sirop d'érable clair biologique en format familial",
+      "description": "Notre sirop d'érable clair biologique en format familial est le choix parfait pour les familles soucieuses de leur bien-être. Son goût pur et sa couleur claire en font un incontournable pour agrémenter vos petits-déjeuners et vos desserts. Faites le plein de douceur naturelle et biologique.",
+      "brand": "Sweet Tree Holdings",
+      "brandURL": "www.sweettreeholdings.com"
+    },
+    {
+      "type": "AMBER",
+      "name": "Sirop d'érable ambré crémeux",
+      "description": "Découvrez la douceur veloutée de notre sirop d'érable ambré crémeux. Sa texture onctueuse et sa saveur délicate en font une expérience gustative unique. Ajoutez une touche de luxe à vos crêpes, vos glaces et vos boissons chaudes avec ce sirop d'érable ambré exceptionnel.",
+      "brand": "Sweet Tree Holdings",
+      "brandURL": "www.sweettreeholdings.com"
+    },
+    {
+      "type": "AMBER",
+      "name": "Sirop d'érable ambré au caramel",
+      "description": "Le mariage divin du sirop d'érable ambré et du caramel crémeux vous transporte dans un tourbillon de gourmandise. Notre sirop d'érable ambré au caramel est idéal pour napper vos crêpes, vos desserts et vos coupes de glace. Succombez à cette douce tentation.",
+      "brand": "Highland Sugarworks",
+      "brandURL": "www.highlandsugarworks.com"
+    },
+    {
+      "type": "AMBER",
+      "name": "Sirop d'érable ambré à la noix de coco",
+      "description": "Découvrez l'alliance exotique entre le sirop d'érable ambré et la noix de coco subtilement parfumée. Notre sirop d'érable ambré à la noix de coco apporte une touche tropicale à vos recettes sucrées. Succombez à cette invitation au voyage gustatif.",
+      "brand": "Decacer",
+      "brandURL": "www.decacer.com"
+    },
+    {
+      "type": "DARK",
+      "name": "Sirop d'érable sombre de récolte précoce",
+      "description": "Notre sirop d'érable sombre de récolte précoce est un trésor délicatement extrait des premières érables de la saison. Son goût riche et sa couleur intense témoignent de la pureté du nectar d'érable. Utilisez ce sirop d'érable sombre d'exception pour sublimer vos créations culinaires.",
+      "brand": "Springtree Maple Farm",
+      "brandURL": "www.springtreemaple.com"
+    },
+    {
+      "type": "DARK",
+      "name": "Sirop d'érable sombre au chocolat noir",
+      "description": "Plongez dans une symphonie de saveurs avec notre sirop d'érable sombre au chocolat noir. Son mariage audacieux allie la richesse du sirop d'érable sombre à l'intensité du chocolat noir. Idéal pour agrémenter vos desserts, vos milkshakes et vos crèmes glacées.",
+      "brand": "Érablière Bernard",
+      "brandURL": "www.erablierebernard.com"
+    },
+    {
+      "type": "DARK",
+      "name": "Sirop d'érable sombre infusé à la menthe",
+      "description": "Laissez-vous rafraîchir par notre sirop d'érable sombre infusé à la menthe. Son goût frais et son arôme revigorant font de ce sirop d'érable sombre une expérience gustative vivifiante. Ajoutez une note de fraîcheur à vos boissons, vos desserts et vos glaces avec cette création gourmande.",
+      "brand": "Maple Grove Farms",
+      "brandURL": "www.maplegrove.com"
+    },
+    {
+      "type": "CLEAR",
+      "name": "Sirop d'érable clair de première qualité",
+      "description": "Notre sirop d'érable clair de première qualité est soigneusement sélectionné pour sa qualité supérieure. Son goût délicat et sa couleur cristalline en font un choix privilégié des amateurs de sirop d'érable. Parfait pour sucrer vos yaourts, vos thés et vos desserts les plus fins.",
+      "brand": "Highland Sugarworks",
+      "brandURL": "www.highlandsugarworks.com"
+    },
+    {
+      "type": "CLEAR",
+      "name": "Sirop d'érable clair infusé à la lavande",
+      "description": "Laissez-vous envoûter par la subtilité de notre sirop d'érable clair infusé à la lavande. Son mariage délicat entre la douceur du sirop d'érable clair et l'arôme apaisant de la lavande offre une expérience gustative unique. Idéal pour accompagner vos desserts légers et parfumés.",
+      "brand": "Decacer",
+      "brandURL": "www.decacer.com"
+    },
+    {
+      "type": "CLEAR",
+      "name": "Sirop d'érable clair biologique en grand format",
+      "description": "Notre sirop d'érable clair biologique en grand format est le choix idéal pour les amateurs de sirop d'érable soucieux de l'environnement. Son goût sucré naturel et sa texture fluide en font un indispensable pour agrémenter vos petits-déjeuners et vos pâtisseries. Optez pour le meilleur, tout en préservant la planète.",
+      "brand": "Cabot Maple",
+      "brandURL": "www.cabotmaple.com"
+    },
+    {
+      "type": "AMBER",
+      "name": "Sirop d'érable ambré de collection",
+      "description": "Découvrez un trésor d'érable avec notre sirop d'érable ambré de collection. Récolté dans les érablières les plus prestigieuses, ce sirop d'érable ambré offre un équilibre parfait entre douceur et intensité. Offrez-vous une expérience gustative inoubliable avec ce sirop d'exception.",
+      "brand": "Springtree Maple Farm",
+      "brandURL": "www.springtreemaple.com"
+    }
+  ],
+  "brands": [
+    {
+      "name": "Érable du Québec",
+      "url": "www.erableduquebec.ca",
+      "presentation": "Érable du Québec, c'est l'histoire d'une tradition québécoise séculaire, transmise de génération en génération depuis l'arrivée des premiers colons. Aujourd'hui, nous perpétuons cette passion pour l'érable en offrant un sirop d'exception, symbole de notre patrimoine unique.",
+      "headline": "Le goût du Québec dans chaque goutte."
+    },
+    {
+      "name": "Citadelle",
+      "url": "www.citadelle-camp.coop",
+      "presentation": "Citadelle, c'est une coopérative d'érablières qui a vu le jour en 1925 dans la région du Québec. Depuis sa fondation, Citadelle s'est engagée à préserver les savoir-faire traditionnels et à promouvoir une production responsable de sirop d'érable, tout en soutenant activement les communautés locales.",
+      "headline": "L'érable au cœur de nos valeurs."
+    },
+    {
+      "name": "Decacer",
+      "url": "www.decacer.com",
+      "presentation": "Decacer, c'est l'histoire d'une famille passionnée par l'érable depuis plus d'un siècle. Depuis ses modestes débuts, Decacer s'est imposée comme l'une des marques les plus réputées en matière de sirop d'érable de qualité supérieure, grâce à son savoir-faire artisanal et à sa quête incessante de l'excellence.",
+      "headline": "La tradition de l'érable, réinventée."
+    },
+    {
+      "name": "Maple Grove Farms",
+      "url": "www.maplegrove.com",
+      "presentation": "Maple Grove Farms, fondée en 1915, est une entreprise américaine qui a su allier l'amour de l'érable à une expertise unique. Grâce à des procédés de fabrication innovants, Maple Grove Farms propose des produits d'érable savoureux et de haute qualité, qui enchantent les papilles depuis plus d'un siècle.",
+      "headline": "L'érable à son apogée."
+    },
+    {
+      "name": "Érablière Bernard",
+      "url": "www.erablierebernard.com",
+      "presentation": "Érablière Bernard, c'est l'histoire d'une famille québécoise qui a fait de sa passion pour l'érable un véritable art de vivre. Depuis 1908, Érablière Bernard perpétue des méthodes de production traditionnelles et offre un sirop d'érable authentique, empreint de l'âme des érablières d'antan.",
+      "headline": "L'érable, une tradition qui se déguste."
+    },
+    {
+      "name": "Highland Sugarworks",
+      "url": "www.highlandsugarworks.com",
+      "presentation": "Highland Sugarworks, c'est l'histoire d'une érablière située au cœur des montagnes du Vermont. Depuis des générations, les artisans d'Highland Sugarworks perpétuent des méthodes de production artisanales pour créer un sirop d'érable d'une pureté exceptionnelle, révélant la quintessence de ce terroir unique.",
+      "headline": "Le Vermont dans chaque bouteille."
+    },
+    {
+      "name": "Cabot Maple",
+      "url": "www.cabotmaple.com",
+      "presentation": "Cabot Maple, c'est l'histoire d'une entreprise familiale située dans le Vermont, berceau des érablières d'exception. Attachée à son héritage rural, Cabot Maple s'attache à produire un sirop d'érable de caractère, en accordant une attention minutieuse à chaque étape du processus de fabrication, pour offrir un produit d'exception.",
+      "headline": "La quintessence de l'érable."
+    },
+    {
+      "name": "Boundary Maples",
+      "url": "www.boundarymaples.com",
+      "presentation": "Boundary Maples, c'est l'histoire d'une érablière située au cœur de la région frontalière du Maine et du Canada. Depuis des décennies, Boundary Maples élabore des sirops d'érable au goût authentique et inégalé, révélant la richesse des terres où les érables prospèrent.",
+      "headline": "L'érable à la frontière du plaisir."
+    },
+    {
+      "name": "Springtree Maple Farm",
+      "url": "www.springtreemaple.com",
+      "presentation": "Springtree Maple Farm, établie dans le Connecticut en 1978, incarne la passion d'une famille pour l'érable et la nature. À travers des méthodes de production respectueuses de l'environnement, Springtree Maple Farm propose des sirops d'érable d'une pureté exceptionnelle, capturant l'essence même de cette ressource naturelle précieuse.",
+      "headline": "Le meilleur de la nature, dans chaque goutte."
+    },
+    {
+      "name": "Sweet Tree Holdings",
+      "url": "www.sweettreeholdings.com",
+      "presentation": "Sweet Tree Holdings, une entreprise novatrice fondée récemment, est dédiée à la recherche de nouvelles façons de valoriser l'érable. Grâce à des procédés uniques de récolte et de transformation, Sweet Tree Holdings offre des produits d'érable innovants qui surprennent les palais les plus exigeants.",
+      "headline": "L'érable réinventé, une expérience gustative inédite."
+    }
+  ]
+}
