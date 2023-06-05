@@ -14,6 +14,7 @@ const removeFromCart = z.object({ productId: z.string() });
 export const cartRouter = createTRPCRouter({
   getCart: withCartSessionProcedure.query(async ({ ctx }) => {
     const { prisma, withCartID } = ctx;
+    console.log({ withCartID, session: ctx.session.user });
     if (withCartID) {
       try {
         return await prisma.cart.findMany({
@@ -32,19 +33,28 @@ export const cartRouter = createTRPCRouter({
       const { session, prisma, withCartID } = ctx;
       if (withCartID) {
         try {
-          await prisma.cart.update({
-            where: { id: withCartID },
-            data: {
-              cartItems: {
-                connectOrCreate: {
-                  where: { productID: input.productID },
-                  create: {
-                    productID: input.productID,
-                    quantity: input.newQty,
-                  },
+          // cannot upsert because no enough unique key
+          return await prisma.$transaction(async (tx) => {
+            const item = await tx.cartItems.findFirst({
+              where: { cartID: withCartID, productID: input.productID },
+              select: { id: true },
+            });
+            if (item?.id) {
+              await tx.cartItems.update({
+                where: { id: item.id },
+                data: {
+                  quantity: { increment: input.newQty },
                 },
-              },
-            },
+              });
+            } else {
+              await tx.cartItems.create({
+                data: {
+                  product: { connect: { id: input.productID } },
+                  cart: { connect: { id: withCartID } },
+                  quantity: input.newQty,
+                },
+              });
+            }
           });
         } catch (err) {
           console.log("Error", err);
@@ -63,7 +73,7 @@ export const cartRouter = createTRPCRouter({
       const token = jwt.sign(
         { domain: process.env.DOMAIN_NAME, cartID: newCart.id },
         process.env.JWT_SECRET as string,
-        { expiresIn: "1M" }
+        { expiresIn: "30d" }
       );
       session.user = token;
       await session.save();
@@ -75,8 +85,15 @@ export const cartRouter = createTRPCRouter({
 
       if (!withCartID) throw new TRPCError({ code: "UNAUTHORIZED" });
       try {
-        await prisma.cartItems.delete({
-          where: { productID: input.productId, cartID: withCartID },
+        // again, cannot upsert for not enough unique key
+        await prisma.$transaction(async (tx) => {
+          const item = await tx.cartItems.findFirst({
+            where: { cartID: withCartID, productID: input.productId },
+            select: { id: true },
+          });
+          if (!item?.id) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR" });
+
+          await tx.cartItems.delete({ where: { id: item.id } });
         });
       } catch (error) {
         throw new TRPCError({ code: "INTERNAL_SERVER_ERROR" });

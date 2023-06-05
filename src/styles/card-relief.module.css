@@ -1,0 +1,31 @@
+.card_relief {
+  position: relative;
+}
+
+.card_relief::before {
+  /* 
+this is from https://necatikcl.dev/
+I just love this effect
+*/
+  background: linear-gradient(
+      18.48deg,
+      rgba(255, 255, 255, 0.25) 2.76%,
+      rgba(255, 255, 255, 0) 17.23%
+    ),
+    linear-gradient(
+      200.6deg,
+      rgba(255, 255, 255, 0.25) 4.13%,
+      rgba(255, 255, 255, 0) 20.54%
+    );
+  border-radius: inherit;
+  content: "";
+  inset: 0;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+  position: absolute;
+}

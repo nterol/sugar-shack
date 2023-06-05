@@ -1,18 +1,10 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient, type ProductType } from "@prisma/client";
 import { getPlaiceholder } from "plaiceholder";
-import fetch from "node-fetch";
 
 import data from "./data.json";
+import { stringToURL } from "@/utils/misc";
 
 const prisma = new PrismaClient();
-
-function stringToURL(n: string): string {
-  return n
-    .normalize("NFD")
-    .replaceAll(" ", "-")
-    .replaceAll("'", "-")
-    .replace(/(?<extension>\.[^.]+$|)(?<badchar>[^a-zA-Z0-9-]?)/g, "$1");
-}
 
 function generateFloat(v = 40): number {
   const random = Math.random() * v;
@@ -24,17 +16,18 @@ async function main() {
   const withBlurDataURL = await Promise.all(
     products.map(async ({ image, ...rest }) => {
       const { base64 } = await getPlaiceholder(image);
-      console.log(`✅ ${image} -> base64 👍`);
       return { ...rest, image, blurDataURL: base64 };
     })
   );
+
+  console.log(`image -> base64 ✅`);
 
   await prisma.$transaction([
     ...brands.map((brand) =>
       prisma.brands.upsert({
         where: { name: brand.name },
         update: {},
-        create: brand,
+        create: { ...brand, handle: stringToURL(brand.name) },
       })
     ),
     ...withBlurDataURL.map(
@@ -47,7 +40,7 @@ async function main() {
           where: { handle },
           update: {},
           create: {
-            type,
+            type: type as keyof typeof ProductType,
             name,
             description,
             handle,

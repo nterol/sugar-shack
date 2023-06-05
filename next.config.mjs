@@ -6,7 +6,7 @@ const config = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "openailabsprodscus.blob.core.windows.net",
+        hostname: "i.imgur.com", // yeah I know
       },
     ],
   },
