@@ -52,7 +52,6 @@ export const cartRouter = createTRPCRouter({
       }
       const newCart = await prisma.cart.create({
         data: {
-          completed: false,
           cartItems: {
             create: {
               productID: input.productID,

@@ -6,7 +6,12 @@ export async function getStaticProps(
 ) {
   const { handle = "" } = ctx.params ?? {};
   try {
-    const product = await prisma.products.findFirst({ where: { handle } });
+    const product = await prisma.products.findFirst({
+      where: { handle },
+      include: {
+        brand: true,
+      },
+    });
     if (!product) throw new Error("Product does not exists in DB");
     return { props: { product } };
   } catch (err) {

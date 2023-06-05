@@ -9,27 +9,28 @@ datasource db {
 }
 
 model Brands {
-  id           String    @id @unique @default(cuid())
-  name         String
+  id           String     @id @unique @default(cuid())
+  name         String     @unique
   url          String
   presentation String
   headline     String
-  Products     Products?
+  Products     Products[]
 }
 
 model Products {
   id          String      @id @unique @default(cuid())
-  handle      String
+  handle      String      @unique
   name        String
   description String
   image       String
+  blurDataURL String
   price       Float
   stock       Int
   type        String
-  brandID     String      @unique
   cartItems   CartItems?
   orderlines  Orderlines?
-  brand       Brands      @relation(fields: [brandID], references: [id])
+  brand       Brands      @relation(fields: [brandName], references: [name])
+  brandName   String
 }
 
 model CartItems {
