@@ -5,7 +5,8 @@ export function stringToURL(n: string): string {
     .normalize("NFD")
     .replaceAll(" ", "-")
     .replaceAll("'", "-")
-    .replace(/(?<extension>\.[^.]+$|)(?<badchar>[^a-zA-Z0-9-]?)/g, "$1");
+    .replace(/(?<extension>\.[^.]+$|)(?<badchar>[^a-zA-Z0-9-]?)/g, "$1")
+    .toLowerCase();
 }
 
 export function formatPrice(price: number) {
