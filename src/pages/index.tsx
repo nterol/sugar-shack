@@ -1,6 +1,6 @@
 import { type InferGetStaticPropsType } from "next";
 import Head from "next/head";
-import s from "@/styles/Home.module.css";
+import s from '@/styles/home.module.css';
 
 import { prisma } from "@/server/db";
 import { ArticleCard } from "@/components/article-card";
