@@ -19,7 +19,11 @@ export const cartRouter = createTRPCRouter({
       try {
         return await prisma.cart.findFirst({
           where: { id: withCartID },
-          select: { cartItems: true },
+          select: {
+            cartItems: {
+              select: { id: true, productID: true, quantity: true },
+            },
+          },
         });
       } catch (err) {
         // cart not found -> destroy session

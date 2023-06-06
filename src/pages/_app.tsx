@@ -6,7 +6,7 @@ import superjson from "superjson";
 import { prisma } from "@/server/db";
 import { sessionOptions } from "@/lib/session";
 import { api } from "@/utils/api";
-import { Header } from "@/components/header";
+import { Header } from "@/components/molecules/header";
 import { Footer } from "@/components/footer";
 import { appRouter } from "@/server/api/root";
 import "@/styles/globals.css";

@@ -1,9 +1,12 @@
 import Link from "next/link";
-import { CartIcon } from "./atoms/icons/cart";
-import { type CartItems } from "@prisma/client";
+import { CartIcon } from "@/components/atoms/icons/cart";
+import { type inferRouterOutputs } from "@trpc/server";
+import { type AppRouter } from "@/server/api/root";
+
+type GetCart = inferRouterOutputs<AppRouter>["cart"]["getCart"];
 
 type HeaderProps = {
-  cart: { cartItems: CartItems[] } | null;
+  cart: GetCart;
 };
 
 export function Header({ cart }: HeaderProps) {
@@ -22,7 +25,10 @@ export function Header({ cart }: HeaderProps) {
           <div className="color-white relative flex aspect-square h-8 items-center justify-center rounded-full bg-primary-main">
             <CartIcon className="h-4 w-4" />
             {cart ? (
-              <div className="absolute -right-2 -top-2 flex aspect-square h-6 items-center justify-center rounded-full bg-secondary-main">
+              <div
+                data-type="badge"
+                className="absolute -right-2 -top-2 flex aspect-square h-6 items-center justify-center rounded-full bg-secondary-main"
+              >
                 <span className="text-xs font-bold text-white">{cartSum}</span>
               </div>
             ) : null}
