@@ -78,7 +78,7 @@ const middleware = t.middleware;
 
 const cartSessionMiddleware = middleware(async (opts) => {
   const { session } = opts.ctx;
-  console.log("IN MIDDLEWARE", session);
+
   if (!session.user) {
     return opts.next({ ctx: { withCartID: null } });
   }
@@ -88,7 +88,6 @@ const cartSessionMiddleware = middleware(async (opts) => {
     );
     return opts.next({ ctx: { withCartID: verified.cartID } });
   } catch (err) {
-    console.log("🔥🔥🔥🔥🔥 JWT HAS EXPIRED");
     session.destroy();
 
     return opts.next({ ctx: { withCartID: null } });

@@ -6,7 +6,7 @@ export const productRouter = createTRPCRouter({
   getCatalogue: publicProcedure
     .input(
       z.object({
-        type: z.string().optional(),
+        type: z.enum(["AMBER", "CLEAR", "DARK"]).nullish(),
         limit: z.number().min(1).max(50).nullish(),
         cursor: z.number().nullish(),
       })
@@ -16,7 +16,7 @@ export const productRouter = createTRPCRouter({
         // const limit = input.limit ?? 50;
         // const { cursor } = input;
         return await ctx.prisma.products.findMany({
-          where: input.type ? { type: input.type } : {},
+          where: input.type ? { type: input.type } : undefined,
           // take: limit + 1,
           // cursor: cursor ? { productCursor: cursor } : undefined,
         });
@@ -32,7 +32,7 @@ export const productRouter = createTRPCRouter({
     .query(async ({ input, ctx }) => {
       try {
         return await ctx.prisma.products.findUnique({
-          where: { id: input.productID },
+          where: { id: input.productID }, include: {brand:true}
         });
       } catch (error) {
         new TRPCError({

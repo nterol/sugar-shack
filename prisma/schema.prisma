@@ -36,17 +36,20 @@ model Products {
   type        ProductType
   cartItems   CartItems[]
   orderlines  Orderlines[]
-  brand       Brands       @relation(fields: [brandName], references: [name])
-  brandName   String
+
+  brand     Brands @relation(fields: [brandName], references: [name])
+  brandName String
 }
 
 model CartItems {
-  id        String   @id @unique @default(cuid())
-  cartID    String   @unique
-  quantity  Int      @default(0)
-  addedAt   DateTime @default(now())
-  cart      Cart     @relation(fields: [cartID], references: [id], onDelete: Cascade)
-  product   Products @relation(fields: [productID], references: [id])
+  id       String   @id @unique @default(cuid())
+  quantity Int      @default(0)
+  addedAt  DateTime @default(now())
+
+  cart   Cart   @relation(fields: [cartID], references: [id], onDelete: Cascade)
+  cartID String
+
+  product   Products @relation(fields: [productID], references: [id], onDelete: Cascade)
   productID String
 }
 
@@ -54,22 +57,22 @@ model Cart {
   id        String      @id @unique @default(cuid())
   createdAt DateTime    @default(now())
   cartItems CartItems[]
-  Order     Order?
 }
 
 model Orderlines {
-  id        String   @id @unique @default(cuid())
-  qty       Int
+  id  String @id @unique @default(cuid())
+  qty Int
+
   product   Products @relation(fields: [productID], references: [id])
   productID String
-  order     Order    @relation(fields: [orderID], references: [id], onDelete: Cascade)
-  orderID   String
+
+  order   Order  @relation(fields: [orderID], references: [id], onDelete: Cascade)
+  orderID String
 }
 
 model Order {
   id           String       @id @unique @default(cuid())
   isOrderValid Boolean
-  cartID       String       @unique
-  cart         Cart         @relation(fields: [cartID], references: [id], onDelete: Cascade)
   orderlines   Orderlines[]
+  // add cartID relation for cart retrieval on failed orders if necessary
 }

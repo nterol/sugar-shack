@@ -3,23 +3,19 @@ import { CartIcon } from "./atoms/icons/cart";
 import { type CartItems } from "@prisma/client";
 
 type HeaderProps = {
-  cart:
-    | {
-        cartItems: CartItems[];
-      }[]
-    | null;
+  cart: { cartItems: CartItems[] } | null;
 };
 
 export function Header({ cart }: HeaderProps) {
   const cartSum =
-    cart?.[0]?.cartItems.reduce((acc, curr) => {
+    cart?.cartItems.reduce((acc, curr) => {
       if (!curr) return acc;
       return acc + curr.quantity;
     }, 0) ?? 0;
   return (
     <header className="flex w-full items-center justify-between border-b-[1px] border-slate-100 bg-white p-6">
       <Link href="/">
-        <h1 className="text-4xl font-bold text-primary-main">Sugar Shack</h1>
+        <h1 className="text-4xl font-bold text-primary-main">Sugar Shack 🍁</h1>
       </Link>
       <nav>
         <Link href="/cart">
