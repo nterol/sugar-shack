@@ -23,7 +23,6 @@ test("have a cookie", async ({ page, context }) => {
 
   expect(
     cookies.find((cookie) => {
-      console.log(cookie.name);
       return cookie.name === "sugar-shack/cc/next";
     })
   ).toBeDefined();
