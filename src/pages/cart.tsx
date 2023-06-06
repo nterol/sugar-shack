@@ -48,8 +48,6 @@ export default function CartPage() {
     },
   });
 
-  console.log(placeOrder);
-
   if (placeOrder.isError) {
     return (
       <CartTemplate>

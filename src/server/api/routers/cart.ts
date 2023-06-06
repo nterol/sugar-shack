@@ -14,7 +14,7 @@ const removeFromCart = z.object({ productId: z.string() });
 export const cartRouter = createTRPCRouter({
   getCart: withCartSessionProcedure.query(async ({ ctx }) => {
     const { prisma, withCartID, session } = ctx;
-    console.log({ withCartID, session: ctx.session.user });
+
     if (withCartID) {
       try {
         return await prisma.cart.findFirst({
@@ -88,7 +88,6 @@ export const cartRouter = createTRPCRouter({
             }
           });
         } catch (err) {
-          console.log(err);
           throw new TRPCError({ code: "INTERNAL_SERVER_ERROR" });
         }
       } else {

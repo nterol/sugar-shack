@@ -1,0 +1,37 @@
+.filter_button {
+    @apply rounded-full bg-transparent px-2 py-1;
+  }
+  
+  /* Or I could use twind... */
+  .filter_button[data-filter="ALL"] {
+    @apply text-black;
+  }
+  
+  .filter_button[data-filter="CLEAR"] {
+    @apply text-secondary-main;
+  }
+  
+  .filter_button[data-filter="AMBER"] {
+    @apply text-primary-main;
+  }
+  
+  .filter_button[data-filter="DARK"] {
+    @apply text-highlight-main;
+  }
+  
+  .filter_button[data-filter="ALL"][data-active="true"] {
+    @apply bg-black text-white;
+  }
+  
+  .filter_button[data-filter="CLEAR"][data-active="true"] {
+    @apply bg-secondary-main text-white;
+  }
+  
+  .filter_button[data-filter="AMBER"][data-active="true"] {
+    @apply bg-primary-main text-white;
+  }
+  
+  .filter_button[data-filter="DARK"][data-active="true"] {
+    @apply bg-highlight-main text-white;
+  }
+  

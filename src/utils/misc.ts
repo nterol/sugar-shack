@@ -1,3 +1,5 @@
+import { type ProductType } from "@prisma/client";
+
 export function stringToURL(n: string): string {
   return n
     .normalize("NFD")
@@ -12,3 +14,11 @@ export function formatPrice(price: number) {
     currency: "CAD",
   }).format(price);
 }
+
+const productType = {
+  CLEAR: { name: "Claire", color: "bg-secondary-main" },
+  AMBER: { name: "Ambrée", color: "bg-primary-main" },
+  DARK: { name: "Sombre", color: "bg-highlight-main" },
+};
+
+export const getProductColorAndType = (type: ProductType) => productType[type];

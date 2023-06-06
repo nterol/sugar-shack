@@ -2,6 +2,7 @@ import { type Article } from "@/pages";
 import Image from "next/image";
 import Link from "next/link";
 import s from "@/styles/card-relief.module.css";
+import { formatPrice } from "@/utils/misc";
 
 export function ArticleCard({ product }: { product: Article }) {
   return (
@@ -20,7 +21,20 @@ export function ArticleCard({ product }: { product: Article }) {
             s.card_relief as string
           } z-10 flex w-full items-center justify-between rounded-xl bg-white p-2 shadow-md`}
         >
-          <h2 className="text-lg font-bold">{product.name}</h2>
+          <div>
+            <h2 className="text-lg font-bold">{product.name}</h2>
+            <p
+              className={`${
+                product.type === "CLEAR"
+                  ? "text-secondary-main"
+                  : product.type === "AMBER"
+                  ? "text-primary-main"
+                  : "text-highlight-main" // that's ugly
+              }`}
+            >
+              {formatPrice(product.price)}
+            </p>
+          </div>
           <button className="flex aspect-square w-[32px]  items-center justify-center rounded-full bg-gray-300 text-black">
             &rarr;
           </button>

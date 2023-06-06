@@ -21,7 +21,7 @@ export const orderRouter = createTRPCRouter({
               where: { id: item.productID },
               data: { stock: { decrement: item.quantity } },
             });
-            console.log(currentStock.id, currentStock.stock);
+
             if (currentStock.stock === 0) {
               await pusher?.trigger(`product-${currentStock.id}`, "isOOS", {
                 data: {
@@ -31,7 +31,6 @@ export const orderRouter = createTRPCRouter({
               });
             }
             if (currentStock.stock < 0) {
-              console.log("💣", currentStock.id);
               await pusher?.trigger(`product-${currentStock.id}`, "lowStock", {
                 data: {
                   productID: currentStock.id,
@@ -45,8 +44,6 @@ export const orderRouter = createTRPCRouter({
           })
         );
       });
-
-      console.log("✅ JUSQUE ICI CA VA");
 
       await prisma.$transaction(async (tx) => {
         const order = await tx.order.create({
@@ -63,7 +60,6 @@ export const orderRouter = createTRPCRouter({
         session.destroy();
       });
     } catch (error) {
-      console.log("🤖", error);
       throw new TRPCError({ code: "UNPROCESSABLE_CONTENT" });
     }
   }),
