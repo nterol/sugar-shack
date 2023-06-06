@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useState } from "react";
-import { QuantityButtons } from "../../molecules/quantity";
+import { useState } from "react";
+import { QuantityButtons } from "@/components/molecules/quantity";
 import { type Products } from "@prisma/client";
 import { BuyButton } from "../../molecules/buy-button";
 import { formatPrice } from "@/utils/misc";
