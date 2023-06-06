@@ -2,11 +2,10 @@ import { BuySection } from "@/components/organisms/buy-section";
 import { prisma } from "@/server/db";
 import { api } from "@/utils/api";
 
-import { formatPrice, stringToURL } from "@/utils/misc";
+import { formatPrice } from "@/utils/misc";
 
 import { type InferGetStaticPropsType, type GetStaticPropsContext } from "next";
 import Image from "next/image";
-import Link from "next/link";
 
 // iron-session/next does not work with ssg functions -> tRPC cannot be used in this case
 export const getStaticProps = async function getStaticProps(
