@@ -1,5 +1,5 @@
 import { defineConfig, devices } from "@playwright/test";
-const baseURL = process.env.PLAYWRIGHT_TEST_BASE_URL || "http://localhost:3000";
+const baseURL = process.env.BASE_URL || "http://localhost:3000";
 
 /**
  * Read environment variables from file.
